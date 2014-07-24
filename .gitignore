@@ -3,3 +3,5 @@ LabRAD.exe
 *.dcu
 *.ddp
 LabRAD.cfg
+*.~dfm
+*.~pas
