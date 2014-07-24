@@ -192,9 +192,9 @@ object ConfigForm: TConfigForm
     object NameLabel: TLabel
       Left = 11
       Top = 96
-      Width = 34
+      Width = 42
       Height = 13
-      Caption = 'Name: '
+      Caption = 'Host ID: '
     end
     object CacheLabel: TLabel
       Left = 11
