@@ -1,0 +1,6 @@
+*.pas	eol=crlf
+*.dpr	eol=crlf
+*.dfm	eol=crlf
+*.dof	eol=crlf
+*.res	binary
+
