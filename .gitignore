@@ -3,5 +3,5 @@ LabRAD.ini
 *.dcu
 *.ddp
 *.cfg
-*.~dfm
-*.~pas
+*.~*
+
