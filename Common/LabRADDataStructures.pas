@@ -71,7 +71,7 @@ interface
     fUnflattener: TLabRADUnflattener;
     fResultText:  TStringList;
 
-    function  Locate(const Indices: array of integer; RequiredTypeTag: TLabRADNodeType = ntAnything): TLRDInfo;
+    function Locate(const Indices: array of integer; RequiredTypeTag: TLabRADNodeType = ntAnything): TLRDInfo;
     procedure DoConversion(TypeTree: TLabRADTypeTree);
 
    public
@@ -273,7 +273,7 @@ interface
 
     procedure   SetContextHigh(Value: TLabRADID);
 
-    property    Context:                 TLabRADContext    read fContext;
+    property    Context:                 TLabRADContext    read fContext write fContext;
     property    Request:                 TLabRADRequestID  read fRequest write fRequest;
     property    Source:                  TLabRADID         read fSrcTgt  write fSrcTgt;
     property    Target:                  TLabRADID         read fSrcTgt  write fSrcTgt;

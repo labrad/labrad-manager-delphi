@@ -60,6 +60,8 @@ interface
   procedure KillAllRecd;
   procedure KillAllMine;
 
+  function FixupPretty(s:string): string;
+
 implementation
 
 uses SysUtils, DataParser, NumParser, TypeTagParser, DataBuilder;
