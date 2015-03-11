@@ -1,0 +1,201 @@
+object NewItemForm: TNewItemForm
+  Left = 281
+  Top = 744
+  Width = 447
+  Height = 88
+  BorderStyle = bsSizeToolWin
+  Caption = 'NewItemForm'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  OnCanResize = FormCanResize
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel2: TPanel
+    Left = 0
+    Top = 0
+    Width = 439
+    Height = 61
+    Align = alClient
+    BevelOuter = bvNone
+    Constraints.MinWidth = 400
+    TabOrder = 0
+    DesignSize = (
+      439
+      61)
+    object CreateKeyButton: TBitBtn
+      Left = 278
+      Top = 32
+      Width = 77
+      Height = 25
+      Anchors = [akTop, akRight]
+      Caption = 'Create'
+      Default = True
+      ModalResult = 1
+      TabOrder = 0
+      Visible = False
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        04000000000000010000120B0000120B00001000000000000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00222222222222
+        27BB2222222222222FFF2222222222220007222222222222777F2B222222B227
+        0D0722222222222F7F7F22B2222BB2000507222222222277727F22BB222BB00D
+        5D022222222227722272222BB77BB0D5D022222FFFF2F7F2272222700070005D
+        02222277772777227222B70DDD00D5D0BBB22772227722272222B0DDDDDD5D0B
+        BBBB27F222222272222220DDDDDDD072222227F22FF227F2222220DD005DD077
+        222227F277F2272F2222277D005DDD0B2222272F7722227F2222220DD55DDD0B
+        B2222272F222227F222222B07DDDD072BB2222272FFFF77222222BB270000722
+        2BB22222777777222222B22222BB2222222B2222222222222222}
+      NumGlyphs = 2
+    end
+    object CancelButton: TBitBtn
+      Left = 358
+      Top = 32
+      Width = 77
+      Height = 25
+      Anchors = [akTop, akRight]
+      Cancel = True
+      Caption = 'Cancel'
+      ModalResult = 2
+      TabOrder = 1
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        04000000000000010000130B0000130B00001000000000000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+        3333333333FFFFF3333333333999993333333333F77777FFF333333999999999
+        3333333777333777FF3333993333339993333377FF3333377FF3399993333339
+        993337777FF3333377F3393999333333993337F777FF333337FF993399933333
+        399377F3777FF333377F993339993333399377F33777FF33377F993333999333
+        399377F333777FF3377F993333399933399377F3333777FF377F993333339993
+        399377FF3333777FF7733993333339993933373FF3333777F7F3399933333399
+        99333773FF3333777733339993333339933333773FFFFFF77333333999999999
+        3333333777333777333333333999993333333333377777333333}
+      NumGlyphs = 2
+    end
+    object ContainerPanel: TPanel
+      Left = 4
+      Top = 4
+      Width = 431
+      Height = 25
+      Anchors = [akLeft, akTop, akRight]
+      BevelOuter = bvNone
+      BorderStyle = bsSingle
+      TabOrder = 2
+      object LeftPanel: TPanel
+        Left = 0
+        Top = 0
+        Width = 149
+        Height = 21
+        Align = alLeft
+        BevelOuter = bvNone
+        TabOrder = 0
+        object PathLabel: TLabel
+          Left = 4
+          Top = 4
+          Width = 125
+          Height = 13
+          Caption = '>> Hello >> World >> '
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+      end
+      object Panel1: TPanel
+        Left = 149
+        Top = 0
+        Width = 278
+        Height = 21
+        Align = alClient
+        BevelOuter = bvNone
+        BorderWidth = 1
+        TabOrder = 1
+        object EditPanel: TPanel
+          Left = 1
+          Top = 1
+          Width = 276
+          Height = 19
+          Align = alClient
+          BevelOuter = bvLowered
+          Color = clWindow
+          TabOrder = 0
+          DesignSize = (
+            276
+            19)
+          object NameEdit: TEdit
+            Left = 3
+            Top = 3
+            Width = 269
+            Height = 15
+            Anchors = [akLeft, akTop, akRight]
+            BorderStyle = bsNone
+            TabOrder = 0
+            Text = 'NameEdit'
+            OnChange = NameEditChange
+          end
+        end
+      end
+    end
+    object CreateDirButton: TBitBtn
+      Left = 278
+      Top = 32
+      Width = 77
+      Height = 25
+      Anchors = [akTop, akRight]
+      Caption = 'Create'
+      Default = True
+      ModalResult = 1
+      TabOrder = 3
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        04000000000000010000120B0000120B00001000000000000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF0055555555B555
+        555555555555555555555BB5555BB5555BB5555555555555555555BB777BB777
+        BB555555FFFFFFFFFF5555500000000007555557777777777F55550BFBFBFBFB
+        0755557F555555557F55550FBFBFBFBF0755557F555555557F55550BFBFBFBFB
+        0755557F555555557F55BB0FBFBFBFBF0BB5557F555555557F555B0BFBFBFBFB
+        0BBB557F555555557F55550FBFBFBFBF0555557FFFFFFFFF7555550000000000
+        555555777777777755555550FBFB055BB55555575FFF75555555555700007555
+        BB55555577775555555555BB555BB5555B5555555555555555555BB5555BB555
+        55B555555555555555555555555B555555555555555555555555}
+      NumGlyphs = 2
+    end
+    object CopyButton: TBitBtn
+      Left = 278
+      Top = 32
+      Width = 77
+      Height = 25
+      Anchors = [akTop, akRight]
+      Caption = 'Copy'
+      Default = True
+      ModalResult = 1
+      TabOrder = 4
+      Visible = False
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        04000000000000010000120B0000120B00001000000000000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF003FFFFFFFFFFF
+        FFFF33333333333FFFFF3FFFFFFFFF00000F333333333377777F33FFFFFFFF09
+        990F33333333337F337F333FFFFFFF09990F33333333337F337F3333FFFFFF09
+        990F33333333337FFF7F33333FFFFF00000F3333333333777773333333FFFFFF
+        FFFF3333333333333F333333333FFFFF0FFF3333333333337FF333333333FFF0
+        00FF33333333333777FF333333333F00000F33FFFFF33777777F300000333000
+        0000377777F33777777730EEE033333000FF37F337F3333777F330EEE0333330
+        00FF37F337F3333777F330EEE033333000FF37FFF7F333F77733300000333000
+        03FF3777773337777333333333333333333F3333333333333333}
+      NumGlyphs = 2
+    end
+  end
+end
