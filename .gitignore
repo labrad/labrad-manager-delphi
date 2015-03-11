@@ -1,7 +1,7 @@
 LabRAD.ini
-LabRAD.exe
+*.exe
 *.dcu
 *.ddp
-LabRAD.cfg
+*.cfg
 *.~dfm
 *.~pas
