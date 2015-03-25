@@ -1,4 +1,4 @@
-{ Copyright (C) 2007 Markus Ansmann
+{ Copyright (C) 2008 Markus Ansmann
  
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -13,30 +13,31 @@
   You should have received a copy of the GNU General Public License
   along with this program.  If not, see <http://www.gnu.org/licenses/>.  }
 
-program LabRAD;
+program Grapher;
 
 uses
   Forms,
-  LRMainForm in 'LRMainForm.pas' {MainForm},
-  LRWhiteListForm in 'LRWhiteListForm.pas' {WhitelistForm},
-  LRErrorListForm in 'LRErrorListForm.pas' {ErrorListForm},
-  LRConfigForm in 'LRConfigForm.pas' {ConfigForm},
-  LRLoginConnection in 'LRLoginConnection.pas',
-  LRServerConnection in 'LRServerConnection.pas',
-  LRConnectionList in 'LRConnectionList.pas',
-  LRManagerConnection in 'LRManagerConnection.pas',
-  LRRegistryConnection in 'LRRegistryConnection.pas',
-  LRStatusReports in 'LRStatusReports.pas',
-  LRServerSettings in 'LRServerSettings.pas',
-  LRCustomConnection in 'LRCustomConnection.pas',
-  LRClientConnection in 'LRClientConnection.pas',
-  LRManagerSupport in 'LRManagerSupport.pas',
-  LRRegistrySupport in 'LRRegistrySupport.pas',
-  LRServerThread in 'LRServerThread.pas',
-  LRIPList in 'LRIPList.pas',
-  LRManagerExceptions in 'LRManagerExceptions.pas',
-  LRVirtualServerConnection in 'LRVirtualServerConnection.pas',
-  LRRegistryCache in 'LRRegistryCache.pas',
+  Main in 'Main.pas' {MainForm},
+  PlotBase in 'PlotBase.pas' {PlotBaseForm},
+  PlotDataSources in 'PlotDataSources.pas',
+  Plot1DLine in 'Plot1DLine.pas' {Plot1DLineForm},
+  Plot2DColor in 'Plot2DColor.pas' {Plot2DColorForm},
+  LiveContainer in 'LiveContainer.pas' {LiveViewForm},
+  UserDialog in 'UserDialog.pas' {UserForm},
+  DrawingSupport in 'DrawingSupport.pas',
+  LabRADAPIExceptions in '..\API\LabRADAPIExceptions.pas',
+  LabRADAPIInfo in '..\API\LabRADAPIInfo.pas',
+  LabRADClient in '..\API\LabRADClient.pas',
+  LabRADConnection in '..\API\LabRADConnection.pas',
+  LabRADDataEditor in '..\API\LabRADDataEditor.pas',
+  LabRADEnvironmentDialog in '..\API\LabRADEnvironmentDialog.pas' {EnvironmentDialogForm},
+  LabRADManagerDialog in '..\API\LabRADManagerDialog.pas' {ManagerDialogForm},
+  LabRADPacketHandler in '..\API\LabRADPacketHandler.pas',
+  LabRADPacketQueues in '..\API\LabRADPacketQueues.pas',
+  LabRADPasswordDialog in '..\API\LabRADPasswordDialog.pas' {PasswordDialogForm},
+  LabRADServer in '..\API\LabRADServer.pas',
+  LabRADServerSetting in '..\API\LabRADServerSetting.pas',
+  LabRADSocket in '..\API\LabRADSocket.pas',
   LabRADDataConverter in '..\Common\LabRADDataConverter.pas',
   LabRADDataStructures in '..\Common\LabRADDataStructures.pas',
   LabRADEnvironmentVariables in '..\Common\LabRADEnvironmentVariables.pas',
@@ -69,10 +70,11 @@ uses
 
 begin
   Application.Initialize;
-  Application.Title := 'LabRAD';
+  Application.CreateForm(TLiveViewForm, LiveViewForm);
   Application.CreateForm(TMainForm, MainForm);
-  Application.CreateForm(TWhitelistForm, WhitelistForm);
-  Application.CreateForm(TErrorListForm, ErrorListForm);
-  Application.CreateForm(TConfigForm, ConfigForm);
+  Application.CreateForm(TUserForm, UserForm);
+  Application.CreateForm(TEnvironmentDialogForm, EnvironmentDialogForm);
+  Application.CreateForm(TManagerDialogForm, ManagerDialogForm);
+  Application.CreateForm(TPasswordDialogForm, PasswordDialogForm);
   Application.Run;
 end.

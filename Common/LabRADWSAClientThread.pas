@@ -249,7 +249,7 @@ begin
 
   // Set SO_KEEPALIVE
   B:=True;
-  if setsockopt(fSockets[a].Socket, IPPROTO_TCP, SO_KEEPALIVE, @B, sizeof(B))<>0 then begin
+  if setsockopt(fSocket, IPPROTO_TCP, SO_KEEPALIVE, @B, sizeof(B))<>0 then begin
     try DoError('SO_KEEPALIVE failed with error code '+inttostr(WSAGetLastError)) except end;
   end;
 

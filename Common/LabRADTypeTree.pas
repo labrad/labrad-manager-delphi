@@ -276,7 +276,7 @@ begin
         Theirs:=Theirs.Up;
       end;
     end;
-  end;  
+  end;
 end;
 
 function TLabRADTypeTree.AddNode(Link: PLabRADTypeTreeNode; Position: TLabRADNodePos; NodeType: TLabRADNodeType; Dimensions: Integer = -1): PLabRADTypeTreeNode;

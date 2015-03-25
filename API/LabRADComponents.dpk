@@ -1,0 +1,87 @@
+{ Copyright (C) 2007 Markus Ansmann
+ 
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 2 of the License, or
+  (at your option) any later version.
+ 
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+ 
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.  }
+
+package LabRADComponents;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'LabRAD API component pack'}
+{$IMPLICITBUILD OFF}
+
+requires
+  rtl,
+  vcl;
+
+contains
+  LabRADManagerDialog in 'LabRADManagerDialog.pas',
+  LabRADPasswordDialog in 'LabRADPasswordDialog.pas',
+  LabRADEnvironmentDialog in 'LabRADEnvironmentDialog.pas',
+  LabRADAPIExceptions in 'LabRADAPIExceptions.pas',
+  LabRADAPIInfo in 'LabRADAPIInfo.pas',
+  LabRADClient in 'LabRADClient.pas',
+  LabRADConnection in 'LabRADConnection.pas',
+  LabRADPacketHandler in 'LabRADPacketHandler.pas',
+  LabRADPacketQueues in 'LabRADPacketQueues.pas',
+  LabRADServer in 'LabRADServer.pas',
+  LabRADSocket in 'LabRADSocket.pas',
+  LabRADWSAThreadSocket in '..\Common\LabRADWSAThreadSocket.pas',
+  LabRADWSAClientThread in '..\Common\LabRADWSAClientThread.pas',
+  LabRADWinSock2 in '..\Common\LabRADWinSock2.pas',
+  LabRADDataStructures in '..\Common\LabRADDataStructures.pas',
+  LabRADTypeTree in '..\Common\LabRADTypeTree.pas',
+  LabRADUnitConversion in '..\Common\LabRADUnitConversion.pas',
+  LabRADExceptions in '..\Common\LabRADExceptions.pas',
+  LabRADLinearUnits in '..\Common\LabRADLinearUnits.pas',
+  LabRADNonLinearUnits in '..\Common\LabRADNonLinearUnits.pas',
+  LabRADUnflattener in '..\Common\LabRADUnflattener.pas',
+  LabRADTimeStamps in '..\Common\LabRADTimeStamps.pas',
+  LabRADFlattener in '..\Common\LabRADFlattener.pas',
+  LabRADPrettyPrinter in '..\Common\LabRADPrettyPrinter.pas',
+  LabRADSharedObjects in '..\Common\LabRADSharedObjects.pas',
+  LabRADMemoryTools in '..\Common\LabRADMemoryTools.pas',
+  LabRADDataConverter in '..\Common\LabRADDataConverter.pas',
+  LabRADMD5 in '..\Common\LabRADMD5.pas',
+  LabRADEnvironmentVariables in '..\Common\LabRADEnvironmentVariables.pas',
+  LabRADServerSetting in 'LabRADServerSetting.pas',
+  LabRADDataEditor in 'LabRADDataEditor.pas',
+  LabRADStringConverter in '..\Common\LabRADStringConverter.pas',
+  DataBuilder in '..\Common\parse\DataBuilder.pas',
+  DataParser in '..\Common\parse\DataParser.pas',
+  DataStorage in '..\Common\parse\DataStorage.pas',
+  NumParser in '..\Common\parse\NumParser.pas',
+  StrParser in '..\Common\parse\StrParser.pas',
+  TypeTagParser in '..\Common\parse\TypeTagParser.pas';
+
+end.

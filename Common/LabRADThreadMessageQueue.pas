@@ -89,7 +89,7 @@ type
 
 implementation
 
-uses LabRADSharedObjects;
+uses LabRADSharedObjects, Forms, Windows;
 
 constructor TTMQThread.Create(Owner: TThreadMessageQueue; CreateSuspended: Boolean);
 begin
@@ -129,8 +129,16 @@ begin
 end;
 
 procedure TTMQThread.SendMessage;
+var fMsg: string;
 begin
-  fOnMsg(fTMQueue, fMessage.Msg, fMessage.Data);
+  try
+    fOnMsg(fTMQueue, fMessage.Msg, fMessage.Data);
+   except
+    on E: Exception do begin
+      fMsg:='"fOnMsg" raised exception: "'+E.Message+'"'#0;
+      Application.MessageBox(@fMsg[1], 'Exception', MB_ICONERROR + MB_OK);
+    end;
+  end;
   if fMessage.AutoFree and assigned(fMessage.Data) then begin
     if fMessage.Data is TLabRADSharedObject then TLabRADSharedObject(fMessage.Data).Free
                                             else fMessage.Data.Free;
