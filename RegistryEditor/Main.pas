@@ -167,7 +167,7 @@ begin
   Pkt:=TLabRADAPIPacket.Create(fTopCtxt, SERVER);
   Pkt.AddRecord     ('cd', 's').Data.SetString('');
   Pkt.AddRecord     ('dir');
-  Dat:=Pkt.AddRecord('Notify On Change', 'wb').Data;
+  Dat:=Pkt.AddRecord('Notify on Change', 'wb').Data;
   Dat.SetWord       (0, fOnChange);
   Dat.SetBoolean    (1, True);
   LabRADClient.Request(Pkt, OnDirListing, 0);
@@ -176,7 +176,7 @@ begin
   Pkt:=TLabRADAPIPacket.Create(fBotCtxt, SERVER);
   Pkt.AddRecord     ('cd', 's').Data.SetString('');
   Pkt.AddRecord     ('dir');
-  Dat:=Pkt.AddRecord('Notify On Change', 'wb').Data;
+  Dat:=Pkt.AddRecord('Notify on Change', 'wb').Data;
   Dat.SetWord       (0, fOnChange);
   Dat.SetBoolean    (1, True);
   LabRADClient.Request(Pkt, OnDirListing, 1);

@@ -3,7 +3,7 @@ object MainForm: TMainForm
   Top = 149
   Width = 575
   Height = 549
-  Caption = 'LabRAD Registry Editor v1.0.1'
+  Caption = 'LabRAD Registry Editor v1.0.2'
   Color = clBtnFace
   Constraints.MinWidth = 480
   Font.Charset = DEFAULT_CHARSET
