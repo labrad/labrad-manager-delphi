@@ -279,6 +279,7 @@ begin
   DirCover.Caption := '';
   TraceCover.Caption := '';
   ParamCover.Caption := '';
+  LabRADClient1.ClearCache;
 end;
 
 procedure TMainForm.ReconnectTimerTimer(Sender: TObject);
@@ -498,6 +499,7 @@ begin
     DirCover.Caption := '';
     TraceCover.Caption := '';
     ParamCover.Caption := '';
+    LabRADClient1.ClearCache;
   end;
 end;
 

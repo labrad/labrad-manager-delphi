@@ -3,7 +3,7 @@ object MainForm: TMainForm
   Top = 139
   Width = 835
   Height = 597
-  Caption = 'LabRAD Grapher v2.0.0'
+  Caption = 'LabRAD Grapher v2.0.1'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -65,13 +65,13 @@ object MainForm: TMainForm
   object Splitter1: TSplitter
     Left = 249
     Top = 25
-    Height = 518
+    Height = 526
   end
   object DirContainer: TPanel
     Left = 0
     Top = 25
     Width = 249
-    Height = 518
+    Height = 526
     Align = alLeft
     BevelOuter = bvNone
     BorderStyle = bsSingle
@@ -168,7 +168,7 @@ object MainForm: TMainForm
       Left = 0
       Top = 21
       Width = 245
-      Height = 493
+      Height = 501
       Align = alClient
       BorderStyle = bsNone
       Color = 15263976
@@ -191,7 +191,7 @@ object MainForm: TMainForm
       Left = 0
       Top = 21
       Width = 245
-      Height = 493
+      Height = 501
       Align = alClient
       BevelOuter = bvNone
       Caption = 'connecting ...'
@@ -209,7 +209,7 @@ object MainForm: TMainForm
     Left = 252
     Top = 25
     Width = 575
-    Height = 518
+    Height = 526
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 1
@@ -291,7 +291,7 @@ object MainForm: TMainForm
       Left = 0
       Top = 108
       Width = 575
-      Height = 410
+      Height = 418
       Align = alClient
       BevelOuter = bvNone
       BorderStyle = bsSingle
@@ -316,7 +316,7 @@ object MainForm: TMainForm
         Left = 0
         Top = 21
         Width = 571
-        Height = 385
+        Height = 393
         Align = alClient
         BorderStyle = bsNone
         Color = 15263976
@@ -341,7 +341,7 @@ object MainForm: TMainForm
         Left = 0
         Top = 21
         Width = 571
-        Height = 385
+        Height = 393
         Align = alClient
         BevelOuter = bvNone
         Color = 15263976
